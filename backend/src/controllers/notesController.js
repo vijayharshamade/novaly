@@ -1,6 +1,6 @@
 
 export const getAllNotes = (req, res) => {
-    res.status(200).json({ message: "you have created 10 notes Successfully" }).send("you just fetched the notes")
+    res.status(200).json({ message: "you have created 10 notes Successfully" })
 }
 
 
