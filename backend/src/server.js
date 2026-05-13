@@ -1,8 +1,15 @@
 // const express = require("express")
 import express from "express"
 import notesRoutes from "./routes/notesRoutes.js"
+import { connectDB } from "./config/db.js"
+import dotenv from "dotenv"
+
+dotenv.config()
+//console.log(process.env.mongodb_URI)
 
 const app = express()
+
+connectDB()
 
 app.use("/api/notes", notesRoutes)
 
@@ -33,3 +40,9 @@ app.use("/api/notes", notesRoutes)
 app.listen(5001, () => {
     console.log("Port running at 5001")
 })
+
+
+
+//cluster password : asudHsp0XtyHM2qp
+
+// srv connection string : mongodb+srv://vharsha736vh_db_user:asudHsp0XtyHM2qp@novaly-1.bfscnd7.mongodb.net/?appName=Novaly-1 
