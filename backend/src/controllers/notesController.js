@@ -5,11 +5,11 @@ export const getAllNotes = (req, res) => {
 
 
 export const createNote = (req, res) => {
-    res.status(201).json({ message: "you just Created a Note" })
+    res.status(201).json({ message: "you just created a note" })
 }
 
 export const updateNote = (req, res) => {
-    res.status(200).json({ message: "nots updated successfuully" })
+    res.status(200).json({ message: "notes updated successfully" })
 }
 
 export const deleteNote = (req, res) => {
