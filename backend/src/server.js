@@ -8,6 +8,7 @@ dotenv.config()
 //console.log(process.env.mongodb_URI)
 
 const app = express()
+const PORT = process.env.PORT || 5001
 
 connectDB()
 
@@ -37,7 +38,7 @@ app.use("/api/notes", notesRoutes)
 //     res.status(200).json({ message: "note deleted successfully" })
 // })
 
-app.listen(5001, () => {
+app.listen(PORT, () => {
     console.log("Port running at 5001")
 })
 
